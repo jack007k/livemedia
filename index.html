@@ -1,0 +1,48 @@
+<html>
+<head>
+
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<style>
+html, body{
+width: 100%;
+height: 100%;
+padding: 0;
+margin: 0;
+overflow: hidden;
+}
+
+#loader{
+background: #000000 url(http://livemedia247.com/loading.gif) center center no-repeat;
+color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    top: 0px;
+    left; 0px;
+    position: absolute;
+}
+
+#website{
+display: none;
+}
+</style>
+
+
+<script>
+$(document).ready(function() {
+
+$('iframe#website').load(function(){
+      $("#loader").remove();
+}).show();
+});
+</script>
+
+</head>
+<body>
+<iframe src="http://livemedia247.com" name="website" id="website" width="100%" marginwidth="0" height="100%" marginheight="0" frameborder="0" hspace="0" vspace="0">Browser not compatible.</iframe>
+
+<div id="loader"></div>
+
+</body>
+</html>
